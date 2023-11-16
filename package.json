@@ -1,0 +1,25 @@
+{
+	"name": "only-cars-tests",
+	"version": "1.0.0",
+	"description": "Cypress Automated Tests",
+	"main": "index.js",
+	"scripts": {
+		"cy:run": "del-cli --force ./allure-results && cypress run",
+		"cy:verify": "cypress run verify",
+		"cy:info": "cypress run info",
+		"cy:chrome": "del-cli --force ./allure-results && cypress run --browser chrome",
+		"cy:spec": "del-cli --force ./allure-results && cypress run --browser chrome --spec",
+		"cy:run:regression": "del-cli --force ./allure-results && cypress run --browser chrome --env tags=regression",
+		"cy:run:smoke": "del-cli --force ./allure-results && cypress run --browser chrome --env tags=smoke"
+	},
+	"author": "Roman Diaz",
+	"license": "ISC",
+	"devDependencies": {
+		"@shelex/cypress-allure-plugin": "^2.40.0",
+		"cypress": "^12.14.0",
+		"cypress-dotenv": "^2.0.0",
+		"cypress-file-upload": "^5.0.8",
+		"del-cli": "^5.1.0",
+		"prettier": "^3.0.3"
+	}
+}
